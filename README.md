@@ -1,43 +1,71 @@
 # Limpieza de Datos del Titanic: Un Notebook Esencial
 
-Este repositorio contiene un Jupyter Notebook que implementa un proceso completo de limpieza de datos utilizando el conocido dataset Titanic, disponible a través de la biblioteca seaborn. El objetivo es guiarte paso a paso en la preparación de datos limpios y estructurados, listos para análisis o modelado.
+Este repositorio contiene un **Jupyter Notebook** diseñado para realizar un proceso completo de limpieza de datos utilizando el dataset Titanic, ampliamente reconocido por su relevancia en análisis de datos. Este notebook es ideal para aprender a preparar datos de manera estructurada y eficiente, dejándolos listos para análisis o modelado.
 
-Contenido del Notebook
-El notebook incluye las siguientes secciones:
+## Contenido del Notebook
 
-I. Descripción del Dataset Titanic
-El dataset contiene información detallada sobre los pasajeros del Titanic, incluyendo:
+### **1. Descripción del Dataset Titanic**
+- El dataset incluye información detallada sobre los pasajeros del Titanic, como:
+  - **Variables principales:** `survived`, `pclass`, `sex`, `age`, entre otras.
+  - **Estructura:** Detalles sobre cada columna y los valores que representa.
+- Se presenta una descripción exhaustiva de los datos para facilitar su comprensión.
 
-Variables relevantes como survived, pclass, sex, age, entre otras.
-Detalles sobre la estructura del dataset y los valores que representa cada columna.
-Se proporciona una descripción exhaustiva de cada campo para facilitar su comprensión.
+---
 
-II. Proceso de Limpieza
-La limpieza de datos incluye los siguientes pasos:
+### **2. Proceso de Limpieza**
+El proceso de limpieza incluye los pasos esenciales para transformar datos en su estado más útil:
 
-Importación de Bibliotecas y Dataset
-Cargar el dataset desde seaborn y mostrar una vista previa de los datos.
+#### **a. Importación de Bibliotecas y Dataset**
+- Carga del dataset directamente desde la biblioteca `seaborn`.
+- Vista previa inicial para comprender su estructura.
 
-Exploración Inicial
-Inspeccionar el dataset para identificar valores nulos, tipos de datos y estructura general.
+#### **b. Exploración Inicial**
+- Identificación de:
+  - Valores nulos.
+  - Tipos de datos.
+  - Estadísticas descriptivas y estructura general.
 
-Tratamiento de Valores Faltantes
+#### **c. Tratamiento de Valores Faltantes**
+- Rellenar valores numéricos (`age`) con la **mediana**.
+- Completar valores categóricos (`embarked`) con la **moda**.
+- Eliminar columnas con alta proporción de valores faltantes (`deck`).
 
-Rellenar valores numéricos (como age) con la mediana.
-Completar valores categóricos (como embarked) con la moda.
-Eliminar columnas con demasiados valores faltantes, como deck.
-Corrección de Tipos de Datos
-Convertir variables como sex y embarked a tipos categóricos para ahorrar memoria y optimizar análisis.
+#### **d. Corrección de Tipos de Datos**
+- Conversión de variables categóricas como `sex` y `embarked` a **tipos categóricos** para optimizar memoria y análisis.
 
-Eliminación de Datos Duplicados
-Identificar y eliminar filas duplicadas para garantizar integridad.
+#### **e. Eliminación de Datos Duplicados**
+- Identificación y eliminación de filas duplicadas para garantizar la integridad del dataset.
 
-Normalización y Transformación
+#### **f. Normalización y Transformación**
+- Escalado de valores numéricos (`fare`) entre 0 y 1.
+- Codificación de variables categóricas (`sex`, `embarked`) mediante **variables dummy** con `pd.get_dummies`.
 
-Escalar valores numéricos (fare) entre 0 y 1.
-Codificar variables categóricas (sex, embarked) en variables dummy con pd.get_dummies.
-Validación Final
-Verificar que no queden valores nulos y obtener una vista previa del dataset limpio.
+#### **g. Validación Final**
+- Verificación de la limpieza del dataset:
+  - Confirmar ausencia de valores nulos.
+  - Inspeccionar las primeras filas del dataset final.
 
-Exportación del Dataset Limpio
-Guardar el dataset final en formato CSV (titanic_limpio.csv) para su uso en futuros análisis o proyectos.
+---
+
+### **3. Exportación del Dataset Limpio**
+- El dataset limpio se guarda en formato **CSV** (`titanic_limpio.csv`) para facilitar su uso en futuros proyectos o análisis.
+
+---
+
+## ¿Por qué usar este Notebook?
+- **Educación práctica:** Aprender técnicas de limpieza de datos paso a paso.
+- **Aplicación directa:** Preparar datos reales para análisis estadístico, modelado o visualización.
+- **Reutilización:** Exportar un dataset limpio y estructurado para futuros proyectos.
+
+---
+
+## Requisitos
+- **Python 3.x**
+- Bibliotecas necesarias:
+  - `pandas`
+  - `numpy`
+  - `seaborn`
+
+Instala las dependencias con:
+```bash
+pip install pandas numpy seaborn
