@@ -1,4 +1,4 @@
-### Limpieza de Datos del Titanic: Un Notebook Esencial
+# Limpieza de Datos del Titanic: Un Notebook Esencial
 
 Este repositorio contiene un Jupyter Notebook que implementa un proceso completo de limpieza de datos utilizando el conocido dataset Titanic, disponible a través de la biblioteca seaborn. El objetivo es guiarte paso a paso en la preparación de datos limpios y estructurados, listos para análisis o modelado.
 
